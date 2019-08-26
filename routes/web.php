@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Profile controller
+Route::resource('profiles','ProfilesController');
+Route::get('/profiles/data','ProfilesController@data')->name('profile.data');

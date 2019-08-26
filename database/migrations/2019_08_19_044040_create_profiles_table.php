@@ -17,6 +17,8 @@ class CreateProfilesTable extends Migration
             $table->increments('id');
             $table->string('avatar')->default('default.jpg')->nullable();
             $table->string('nama');
+            $table->string('kelas');
+            $table->string('jurusan');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->string('agama');
